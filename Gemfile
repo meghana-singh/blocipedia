@@ -22,6 +22,8 @@ source 'https://rubygems.org'
  
  gem 'bootstrap-sass'
  
+ gem 'devise'
+ 
  # Used for encrypting User passwords
  #gem 'bcrypt'
 
