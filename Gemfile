@@ -23,6 +23,7 @@ source 'https://rubygems.org'
  gem 'bootstrap-sass'
  
  gem 'devise'
+ gem "pundit"
  
  # Used for encrypting User passwords
  #gem 'bcrypt'
