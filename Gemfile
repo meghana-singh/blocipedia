@@ -24,6 +24,7 @@ source 'https://rubygems.org'
  
  gem 'devise'
  gem "pundit"
+ gem "faker"
  
  # Used for encrypting User passwords
  #gem 'bcrypt'

@@ -5,3 +5,23 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'faker'
+
+  User.create!(
+     email: Faker::Internet.email,
+     role:  "standard",
+     password: Faker::Internet.password
+  )
+  
+  Wiki.create!(
+      title: Faker::HarryPotter.book,
+      body:  Faker::HarryPotter.quote
+  )
+  
+  
+  puts "#{User.count} users created"
+  puts "#{User.all}"
+  puts "#{Wiki.count} wikis created"
+  puts "#{Wiki.all}"
+  
+  
