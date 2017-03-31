@@ -7,9 +7,9 @@ class User < ActiveRecord::Base
   after_initialize :default_user_role
   
   def default_user_role
-    self.role = :standard    
+    self.role ||= :standard    
   end
   
-  enum role: [:admin, :standard, :premium]       
+  enum role: [:standard, :premium, :admin]       
   
 end
