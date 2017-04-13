@@ -9,13 +9,13 @@ require 'faker'
 
   User.create!(
      email: Faker::Internet.email,
-     role:  "standard",
      password: Faker::Internet.password
   )
   
   Wiki.create!(
-      title: Faker::HarryPotter.book,
-      body:  Faker::HarryPotter.quote
+      title:   Faker::HarryPotter.book,
+      body:    Faker::HarryPotter.quote,
+      private: Faker::Boolean.boolean
   )
   
   
