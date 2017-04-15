@@ -15,9 +15,12 @@
       <li><%= link_to "About", about_path %></li>
       <div class="pull-right user-info">
         <% if user_signed_in? %>
+           Account: <%= link_to current_user.role, new_charges_path, :class => 'navbar-link' %> |
            Signed in as: <strong><%= current_user.email %></strong> |
            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> - <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-        <% else %>
+        <% end %>
+        
+        <% if user_signed_in? == false %>           
            <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %> -
            <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
         <% end %>

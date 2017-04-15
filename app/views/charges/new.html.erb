@@ -1,0 +1,10 @@
+<%= form_tag charges_path do %>
+  <% if current_user.role == 'standard' %>
+     <h4>You could Upgrade to Premium with a one time annual payment of $10/-</h4>
+     <script class='stripe-button' src="https://checkout.stripe.com/checkout.js" data-key="<%= @stripe_btn_data[:key] %>" data-amount="<%= @stripe_btn_data[:amount] %>" data-description="<%= @stripe_btn_data[:description] %>" ></script>
+  <% end %>
+<% end %>
+<% if current_user.role == 'premium' %>
+  <h4> U could change from Premium account to standard anytime!</h4>
+  <%= button_to "Standard", {controller: "charges", action: "create"}, class: 'btn btn-success' %>
+<% end %>
