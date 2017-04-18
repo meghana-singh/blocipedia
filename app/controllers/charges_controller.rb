@@ -42,7 +42,7 @@ class ChargesController < ApplicationController
     # This `rescue block` catches and displays those errors.
     rescue Stripe::CardError => e
       flash[:alert] = e.message
-      redirect_to new_charges_path
+      redirect_to new_charge_path
   end
 
 end

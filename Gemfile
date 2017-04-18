@@ -18,6 +18,7 @@ source 'https://rubygems.org'
    gem 'rspec-rails', '~> 3.0'
    gem 'shoulda'
    gem 'factory_girl_rails', '~> 4.0'
+   gem 'byebug'
  end
  
  gem 'bootstrap-sass'
