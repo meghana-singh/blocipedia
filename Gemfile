@@ -27,6 +27,7 @@ source 'https://rubygems.org'
  gem "pundit"
  gem "faker"
  gem "stripe"
+ gem "redcarpet"
  
  # Used for encrypting User passwords
  #gem 'bcrypt'
