@@ -11,8 +11,7 @@ class ChargesController < ApplicationController
   def create
     
     if current_user.role == 'premium'
-      current_user.role = 'standard'
-      current_user.save
+      current_user.downgrade()
       return redirect_to root_path
     end
     
