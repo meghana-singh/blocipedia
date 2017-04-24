@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :wikis
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -12,4 +13,15 @@ class User < ActiveRecord::Base
   
   enum role: [:standard, :premium, :admin]       
   
+    
+ def downgrade
+  self.role = 'standard'
+  self.save
+
+  # down here you can change all the users wikis to public
+  # (we can access all the user's wikis by doing self.wikis)
+  self.wikis.update_all(private: false)
+  
+ end
+ 
 end
