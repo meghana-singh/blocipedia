@@ -1,0 +1,12 @@
+<% @users.each do |user| %>
+   <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= user %>
+         <%= button_to "#{user.email}", {controller: "collaborators", action: "create", params: params}, class: 'btn btn-success' %>  
+         <%= params %>
+       </h4>
+     </div>
+   </div>
+<% end %>
+ 
