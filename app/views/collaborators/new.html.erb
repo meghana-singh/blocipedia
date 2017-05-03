@@ -1,10 +1,19 @@
-<% @users.each do |user| %>
+<h3> Add Collaborators </h3>
+<% @users_currently_not_collaborating.each do |user| %>
    <div class="media">
      <div class="media-body">
        <h4 class="media-heading">
-         <%= user %>
-         <%= button_to "#{user.email}", {controller: "collaborators", action: "create", params: params}, class: 'btn btn-success' %>  
-         <%= params %>
+         <%= button_to "#{user.email}", {controller: "collaborators", action: "create", wiki_id: @wiki.id, user_id: user.id} , class: 'btn btn-success' %>  
+       </h4>
+     </div>
+   </div>
+<% end %>
+<h3> Remove Collaborators </h3>
+<% @collaborating_users.each do |user| %>
+   <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= button_to "#{user.email}", {controller: "collaborators", action: "destroy", wiki_id: @wiki.id, user_id: user.id} , class: 'btn btn-danger' %>  
        </h4>
      </div>
    </div>
