@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   
+  # Removed comfirmable as there is some issue with sending emails on cloud9
+  # Though the mails are sent, they are never recieved by gmail/yahoo
+  before_save -> { skip_confirmation! }
+  
   after_initialize :default_user_role
   
   def default_user_role
