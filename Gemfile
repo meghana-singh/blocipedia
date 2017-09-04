@@ -2,6 +2,7 @@ source 'https://rubygems.org'
  
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
  gem 'rails', '4.2.5'
+ #gem 'rails', '~> 5.1.1'
  
  # #1
  group :production do
@@ -16,6 +17,7 @@ source 'https://rubygems.org'
  
  group :development, :test do
    gem 'rspec-rails', '~> 3.0'
+   #gem 'rspec-rails'
    gem 'shoulda'
    gem 'factory_girl_rails', '~> 4.0'
    gem 'byebug'
@@ -40,6 +42,7 @@ source 'https://rubygems.org'
  gem 'uglifier', '>= 1.3.0'
  # Use CoffeeScript for .coffee assets and views
  gem 'coffee-rails', '~> 4.1.0'
+ #gem 'coffee-rails', '~> 4.2'
  # Use jquery as the JavaScript library
  gem 'jquery-rails'
  # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
