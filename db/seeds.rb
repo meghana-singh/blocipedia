@@ -19,7 +19,7 @@ require 'faker'
   )
   
   User.create!(
-    email: "admin@gmail.com",
+    email: "test@gmail.com",
     password: "abcd@1234",
     role: "admin"
     )
