@@ -18,6 +18,11 @@ require 'faker'
       private: Faker::Boolean.boolean
   )
   
+  User.create!(
+    email: "admin@gmail.com",
+    password: "abcd@1234",
+    role: "admin"
+    )
   
   puts "#{User.count} users created"
   puts "#{User.all}"
