@@ -1,7 +1,7 @@
 class ChargesController < ApplicationController
   
   def new
-    @amount = Amount.new(50_00)  
+    @amount = Amount.new(10_00)  
     
     @stripe_btn_data = {
       key: "#{ Rails.configuration.stripe[:publishable_key] }",
